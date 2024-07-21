@@ -3,13 +3,13 @@ using Microsoft.Extensions.DependencyInjection;
 using MudBlazor;
 using MudBlazor.Services;
 
-namespace $safeprojectname$;
+namespace WinformsBlazorEmbeddingTemplate;
 
 public partial class Main : Form
 {
     // C:\\Users\\[UserName]\\AppData\\Roaming\\WinformsBlazorTemplate\\Resources
     public static readonly string AppPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-        "WinformsBlazorTemplate\\Resources");
+        "WinformsBlazorEmbeddingTemplate\\Resources");
 
     public Main()
     {

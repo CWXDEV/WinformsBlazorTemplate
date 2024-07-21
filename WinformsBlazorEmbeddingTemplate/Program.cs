@@ -1,6 +1,6 @@
-using $safeprojectname$.Helpers;
+using WinformsBlazorEmbeddingTemplate.Helpers;
 
-namespace $safeprojectname$;
+namespace WinformsBlazorEmbeddingTemplate;
 
 static class Program
 {

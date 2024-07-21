@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace $safeprojectname$.Helpers;
+namespace WinformsBlazorEmbeddingTemplate.Helpers;
 
 public class SetupHelper
 {
@@ -57,31 +57,31 @@ public class SetupHelper
         // TODO: change to Region
         if (debugMode)
         {
-            _resourcePathing.Add("WinformsBlazorTemplate.Resources.index.html", "index.html");
-            _resourcePathing.Add("WinformsBlazorTemplate.Resources.app.js", "app.js");
-            _resourcePathing.Add("WinformsBlazorTemplate.Resources.app.css", "app.css");
-            _resourcePathing.Add("WinformsBlazorTemplate.Resources.app.ico", "app.ico");
+            _resourcePathing.Add("WinformsBlazorEmbeddingTemplate.Resources.index.html", "index.html");
+            _resourcePathing.Add("WinformsBlazorEmbeddingTemplate.Resources.app.js", "app.js");
+            _resourcePathing.Add("WinformsBlazorEmbeddingTemplate.Resources.app.css", "app.css");
+            _resourcePathing.Add("WinformsBlazorEmbeddingTemplate.Resources.app.ico", "app.ico");
         }
         else
         {
             if (!File.Exists(Path.Combine(Main.AppPath, "index.html")))
             {
-                _resourcePathing.Add("WinformsBlazorTemplate.Resources.index.html", "index.html");
+                _resourcePathing.Add("WinformsBlazorEmbeddingTemplate.Resources.index.html", "index.html");
             }
 
             if (!File.Exists(Path.Combine(Main.AppPath, "app.js")))
             {
-                _resourcePathing.Add("WinformsBlazorTemplate.Resources.app.js", "app.js");
+                _resourcePathing.Add("WinformsBlazorEmbeddingTemplate.Resources.app.js", "app.js");
             }
 
             if (!File.Exists(Path.Combine(Main.AppPath, "app.css")))
             {
-                _resourcePathing.Add("WinformsBlazorTemplate.Resources.app.css", "app.css");
+                _resourcePathing.Add("WinformsBlazorEmbeddingTemplate.Resources.app.css", "app.css");
             }
 
             if (!File.Exists(Path.Combine(Main.AppPath, "app.ico")))
             {
-                _resourcePathing.Add("WinformsBlazorTemplate.Resources.app.ico", "app.ico");
+                _resourcePathing.Add("WinformsBlazorEmbeddingTemplate.Resources.app.ico", "app.ico");
             }
         }
     }
