@@ -1,6 +1,6 @@
 ﻿{
   "$schema": "http://json.schemastore.org/template",
-  "author": "CWX",
+  "author": "CWXDEV",
   "classifications": [ "Common", "WinForms" ],
   "identity": "WinformsBlazor.EmbeddedTemplate",
   "name": "Winforms Blazor Hybrid with Resource Embedding",
