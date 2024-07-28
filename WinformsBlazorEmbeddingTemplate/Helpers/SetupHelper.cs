@@ -61,6 +61,9 @@ public class SetupHelper
             _resourcePathing.Add("WinformsBlazorEmbeddingTemplate.Resources.app.js", "app.js");
             _resourcePathing.Add("WinformsBlazorEmbeddingTemplate.Resources.app.css", "app.css");
             _resourcePathing.Add("WinformsBlazorEmbeddingTemplate.Resources.app.ico", "app.ico");
+            _resourcePathing.Add("WinformsBlazorEmbeddingTemplate.Resources.MudBlazor.min.css", "MudBlazor.min.css");
+            _resourcePathing.Add("WinformsBlazorEmbeddingTemplate.Resources.MudBlazor.min.js", "MudBlazor.min.js");
+            _resourcePathing.Add("WinformsBlazorEmbeddingTemplate.Resources.WebView2Loader.dll", "WebView2Loader.dll");
         }
         else
         {
@@ -82,6 +85,21 @@ public class SetupHelper
             if (!File.Exists(Path.Combine(Main.AppPath, "app.ico")))
             {
                 _resourcePathing.Add("WinformsBlazorEmbeddingTemplate.Resources.app.ico", "app.ico");
+            }
+            
+            if (!File.Exists(Path.Combine(Main.AppPath, "MudBlazor.min.css")))
+            {
+                _resourcePathing.Add("WinformsBlazorEmbeddingTemplate.Resources.MudBlazor.min.css", "MudBlazor.min.css");
+            }
+            
+            if (!File.Exists(Path.Combine(Main.AppPath, "MudBlazor.min.js")))
+            {
+                _resourcePathing.Add("WinformsBlazorEmbeddingTemplate.Resources.MudBlazor.min.js", "MudBlazor.min.js");
+            }
+            
+            if (!File.Exists(Path.Combine(Main.AppPath, "WebView2Loader.dll")))
+            {
+                _resourcePathing.Add("WinformsBlazorEmbeddingTemplate.Resources.WebView2Loader.dll", "WebView2Loader.dll");
             }
         }
     }
