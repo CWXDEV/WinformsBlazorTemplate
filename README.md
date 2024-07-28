@@ -3,6 +3,10 @@ A Basic setup for a Winforms Blazor hybrid app
 - Aim of this template is to allow the directory where the Exe is located to be clean.
 - All resources are moved to `appdata/{projectName}/Resources` on start
 
+# Dependencies
+MudBlazor
+Microsoft.AspNetCore.Components.WebView.WindowsForms
+
 # To Use
 - `dotnet new install CWXDEV.Templates::1.1.0`
 
