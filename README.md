@@ -2,8 +2,7 @@
 A Basic setup for a Winforms Blazor hybrid app
 
 # To Use
-- `dotnet new install CWXDEV.Templates::1.0.0`
+- `dotnet new install CWXDEV.Templates::1.2.0`
 
 # TODO:
-- change the `debugMode` to be a region
 - change the CDN for a font to be local, if this is a concern
