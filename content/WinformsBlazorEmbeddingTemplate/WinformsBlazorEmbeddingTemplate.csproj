@@ -7,29 +7,21 @@
         <Nullable>enable</Nullable>
         <UseWindowsForms>true</UseWindowsForms>
         <ImplicitUsings>enable</ImplicitUsings>
-        <PackageVersion>1.1.0</PackageVersion>
+        <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+        <!-- Required to allow Webview to load, make sure this is enabled in your publish settings too! -->
+        <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+        <PackageVersion>2.0.0</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.AspNetCore.Components.WebView.WindowsForms" Version="8.0.70" />
-      <PackageReference Include="MudBlazor" Version="7.3.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebView.WindowsForms" Version="8.0.70"/>
+        <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="8.0.7"/>
+        <PackageReference Include="MudBlazor" Version="7.3.0"/>
     </ItemGroup>
 
     <ItemGroup>
-        <None Remove="Resources\index.html" />
-        <None Remove="Resources\app.js" />
-        <None Remove="Resources\app.css" />
-        <None Remove="Resources\app.ico" />
-        <None Remove="Resources\MudBlazor.min.css" />
-        <None Remove="Resources\MudBlazor.min.js" />
-        <None Remove="Resources\WebView2Loader.dll" />
-        <EmbeddedResource Include="Resources\index.html" />
-        <EmbeddedResource Include="Resources\app.js" />
-        <EmbeddedResource Include="Resources\app.css" />
-        <EmbeddedResource Include="Resources\app.ico" />
-        <EmbeddedResource Include="Resources\MudBlazor.min.css" />
-        <EmbeddedResource Include="Resources\MudBlazor.min.js" />
-        <EmbeddedResource Include="Resources\WebView2Loader.dll" />
+        <None Remove="Resources\*"/>
+        <EmbeddedResource Include="Resources\*"/>
     </ItemGroup>
 
 </Project>

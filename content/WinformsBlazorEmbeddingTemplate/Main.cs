@@ -8,6 +8,7 @@ namespace WinformsBlazorEmbeddingTemplate;
 public partial class Main : Form
 {
     // C:\\Users\\[UserName]\\AppData\\Roaming\\WinformsBlazorTemplate\\Resources
+    // I have left this in, just incase some might want an easy place to store files outside of the assembly path.
     public static readonly string AppPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
         "WinformsBlazorEmbeddingTemplate\\Resources");
 
@@ -24,14 +25,16 @@ public partial class Main : Form
         services.AddBlazorWebViewDeveloperTools();
         services.AddMudServices();
 
-        // HostPage will be the location of your "wwwroot" folder,
-        // this would contain your index.html, css, js, anything you want to refrence in your Razor pages
-        var blazorWebView = new BlazorWebView()
+        // this uses the ManifestEmbeddedFileProvider, this is basically middleware and will allow use of embedded resources
+        // without the need to extract them.
+        var blazorWebView = new EmbeddedBlazorWebView()
         {
+            UseEmbeddedResources = true,
             Dock = DockStyle.Fill,
-            HostPage = Path.Combine(AppPath, "index.html"),
+            HostPage = "index.html", // this will be Resources/index.html
             Services = services.BuildServiceProvider()
         };
+        
         blazorWebView.RootComponents.Add<BlazorApp>("#app");
         Controls.Add(blazorWebView);
     }
